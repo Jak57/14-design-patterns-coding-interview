@@ -1,38 +1,5 @@
 // https://medium.com/@stephen.joel/two-heaps-median-f28ebc1569d7
 // https://leetcode.com/problems/find-median-from-data-stream/
-
-class MedianFinder(object):
-    def __init__(self):
-        self.heaps = [], []
-
-    def addNum(self, num):
-        """
-        :type num: int
-        :rtype: None
-        """
-        small, large = self.heaps
-        if len(small) == len(large):
-            heappush(large ,-heappushpop(small, -num))
-        else:
-            heappush(small, -heappushpop(large, num))
-
-    def findMedian(self):
-        """
-        :rtype: float
-        """
-        small, large = self.heaps
-        if len(small) == len(large):
-            return (-small[0] + large[0]) / 2.0
-        else:
-            return float(large[0])
-    
-
-# Your MedianFinder object will be instantiated and called as such:
-# obj = MedianFinder()
-# obj.addNum(num)
-# param_2 = obj.findMedian()
-
-#################################
   
 class MedianFinder {
 public:
@@ -72,3 +39,38 @@ public:
  * obj->addNum(num);
  * double param_2 = obj->findMedian();
  */
+
+/*
+
+class MedianFinder(object):
+    def __init__(self):
+        self.heaps = [], []
+
+    def addNum(self, num):
+        """
+        :type num: int
+        :rtype: None
+        """
+        small, large = self.heaps
+        if len(small) == len(large):
+            heappush(large ,-heappushpop(small, -num))
+        else:
+            heappush(small, -heappushpop(large, num))
+
+    def findMedian(self):
+        """
+        :rtype: float
+        """
+        small, large = self.heaps
+        if len(small) == len(large):
+            return (-small[0] + large[0]) / 2.0
+        else:
+            return float(large[0])
+    
+
+# Your MedianFinder object will be instantiated and called as such:
+# obj = MedianFinder()
+# obj.addNum(num)
+# param_2 = obj.findMedian()
+
+*/
