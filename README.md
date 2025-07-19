@@ -1,7 +1,7 @@
-# 14 Design Patterns Coding Interview
+# 14 Design Patterns for Coding Interview
 
 ## Table of Contents
-1. Sliding Window
+1. [Sliding Window](https://github.com/Jak57/14-design-patterns-coding-interview/tree/main/1.%20Sliding%20Window)
 2. Two Pointers or Iterators
 3. Fast and Slow pointers
 4. Merge Intervals
